@@ -151,7 +151,9 @@ Class Image {
 			$new_image_name = $this->pathinfo['filename'].'_'.date("YmdHis").'_'.rand(1000,9999);
 		}
 
-		$this->imageXX($this->image, $new_image_name.'.'.$this->ext);
+		$filename =  $new_image_name.'.'.$this->pathinfo['extension'];
+		$this->imageXX($this->image, $filename);
+		return $filename;
 	}
 
 
